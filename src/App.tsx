@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
-import Header from "./components/Header/Header";
 import SignupModal from "./components/SignupModal/SignupModal";
 import LoginModal from "./components/LoginModal/LoginModal";
+import Layout from "./components/Layout";
 import HeroSection from "./components/HeroSection/HeroSection";
 import SliderSection from "./components/SliderSection/SliderSection";
 import QuoteSection from "./components/QuoteSection/QuoteSection";
 import InfoSection from "./components/InfoSection/InfoSection";
 import ConnectSection from "./components/ConnectSection/ConnectSection";
 import CtaSection from "./components/CtaSection/CtaSection";
-import Footer from "./components/Footer/Footer";
-
-
+import CardList from "./components/CardList/CardList"; 
 
 const App: React.FC = () => {
   const [showSignup, setShowSignup] = useState(false);
@@ -26,21 +24,22 @@ const App: React.FC = () => {
   return (
     <>
       {loading && <Preloader />}
-      <Header onSignup={() => setShowSignup(true)} onLogin={() => setShowLogin(true)} />
       <SignupModal open={showSignup} onClose={() => setShowSignup(false)} />
       <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
-      <main>
+      <Layout
+        onSignup={() => setShowSignup(true)}
+        onLogin={() => setShowLogin(true)}
+      >
         <HeroSection />
         <SliderSection />
+        
         <QuoteSection />
         <InfoSection />
         <ConnectSection />
         <CtaSection />
-      </main>
-      <Footer />
+      </Layout>
     </>
   );
 };
-
 
 export default App;
