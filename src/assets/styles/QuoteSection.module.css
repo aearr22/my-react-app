@@ -1,0 +1,32 @@
+@import "../../styles/main.css";
+@import "../../styles/image.css";
+
+.quote {
+  background-color: #f1f1f1;
+  padding: 40px 0;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.images {
+  align-items: center;
+  margin-top: 50px;
+}
+.img_dop1 {
+  width: 70px;
+  margin-left: -300px;
+}
+.img_dop2 {
+  width: 70px;
+  margin-left: 210px;
+}
+.author h4 {
+  margin: 0;
+}
+.author p {
+  margin: 0;
+  color: #888;
+}

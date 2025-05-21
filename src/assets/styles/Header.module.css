@@ -1,0 +1,47 @@
+.header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.nav {
+  display: flex;
+}
+.forRecruiters {
+  margin-left: 20px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.buttonjoin {
+  margin-left: 20px;
+  background-color: #3D1EDD;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.buttonjoin:hover {
+  background-color: #2b0f9e;
+}
+.login {
+  margin-left: 20px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

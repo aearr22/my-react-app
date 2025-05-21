@@ -1,0 +1,23 @@
+@import "../../styles/main.css";
+
+.hero {
+  text-align: center;
+  margin-bottom: 10%;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.buttonjoin {
+  background-color: #3D1EDD;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.buttonjoin:hover {
+  background-color: #2b0f9e;
+}
