@@ -11,6 +11,8 @@ import ConnectSection from "./components/ConnectSection/ConnectSection";
 import CtaSection from "./components/CtaSection/CtaSection";
 import Footer from "./components/Footer/Footer";
 
+
+
 const App: React.FC = () => {
   const [showSignup, setShowSignup] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -39,5 +41,6 @@ const App: React.FC = () => {
     </>
   );
 };
+
 
 export default App;
