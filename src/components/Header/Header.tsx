@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/Header.module.css";
+import styles from "../../assets/styles/Header.module.css";
 
 interface HeaderProps {
   onSignup: () => void;

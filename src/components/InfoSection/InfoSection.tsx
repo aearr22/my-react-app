@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../assets/styles/InfoSection.module.css";
+import styles from "../../assets/styles/InfoSection.module.css";
 
 const features = [
   {

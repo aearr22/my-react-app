@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/QuoteSection.module.css";
+import styles from "../../assets/styles/QuoteSection.module.css";
 
 const QuoteSection: React.FC = () => (
   <section className={styles.quote}>

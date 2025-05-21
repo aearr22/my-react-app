@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/SignupModal.module.css";
+import styles from "../../assets/styles/SignupModal.module.css";
 
 interface SignupModalProps {
   open: boolean;

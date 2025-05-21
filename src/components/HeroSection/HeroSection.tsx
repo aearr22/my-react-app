@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/HeroSection.module.css";
+import styles from "../../assets/styles/HeroSection.module.css";
 
 const HeroSection: React.FC = () => (
   <section className={styles.hero}>

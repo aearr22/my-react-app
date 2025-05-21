@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/CtaSection.module.css";
+import styles from "../../assets/styles/CtaSection.module.css";
 
 const CtaSection: React.FC = () => (
   <section className={styles.cta}>

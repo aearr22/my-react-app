@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles/ConnectSection.module.css";
+import styles from "../../assets/styles/ConnectSection.module.css";
 
 const ConnectSection: React.FC = () => (
   <section className={styles.connect}>
