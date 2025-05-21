@@ -5,8 +5,8 @@ const QuoteSection: React.FC = () => (
   <section className={styles.quote}>
     <div className={styles.container}>
       <div className={styles.images}>
-        <img src="/assets/img/mask.png" alt="mas" className={styles.img_dop1} />
-        <img src="/assets/img/avatar.png" alt="" className={styles.img_dop2} />
+        <img src="img/mask.png" alt="mas" className={styles.img_dop1} />
+        <img src="img/avatar.png" alt="" className={styles.img_dop2} />
       </div>
       <blockquote>
         <h1>

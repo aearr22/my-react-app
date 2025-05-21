@@ -5,17 +5,17 @@ const features = [
   {
     title: "Profile Builder",
     text: "Create a professional profile to showcase your skills.",
-    img: "/assets/img/professional-profile.png"
+    img: "img/professional-profile.png"
   },
   {
     title: "Job Matching",
     text: "Get matched with jobs that fit your background.",
-    img: "/assets/img/professional-profile.png"
+    img: "img/professional-profile.png"
   },
   {
     title: "Instant Feedback",
     text: "Receive instant feedback from recruiters.",
-    img: "/assets/img/professional-profile.png"
+    img: "img/professional-profile.png"
   }
 ];
 

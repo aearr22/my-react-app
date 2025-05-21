@@ -4,7 +4,7 @@ import styles from "../../assets/styles/ConnectSection.module.css";
 const ConnectSection: React.FC = () => (
   <section className={styles.connect}>
     <div className={styles.container}>
-      <img src="/assets/img/connect-image.png" alt="Connect with Recruiter" className={styles.connectImage} />
+      <img src="img/connect-image.png" alt="Connect with Recruiter" className={styles.connectImage} />
       <div className={styles.connectText}>
         <h1>Connect With Recruiter</h1>
         <p>

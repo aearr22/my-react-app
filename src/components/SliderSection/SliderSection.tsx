@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "../../assets/styles/SliderSection.module.css";
 
 const images = [
-  "/assets/img/1.jpg",
-  "/assets/img/2.jpg",
-  "/assets/img/3.jpg",
+  "img/1.jpg",
+  "img/2.jpg",
+  "img/3.jpg",
 ];
 
 const SliderSection: React.FC = () => {

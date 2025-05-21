@@ -8,7 +8,7 @@ const CtaSection: React.FC = () => (
         <h1>Set up your profile.<br />Let jobs find you.</h1>
         <button className={styles.ctaButton}>Join Now</button>
       </div>
-      <img src="/assets/img/job-image.png" alt="Job" className={styles.ctaImage} />
+      <img src="img/job-image.png" alt="Job" className={styles.ctaImage} />
     </div>
   </section>
 );

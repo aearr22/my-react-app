@@ -26,14 +26,13 @@
   border-radius: 5px;
 }
 .buttonjoin {
-  margin-left: 20px;
   background-color: #3D1EDD;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .buttonjoin:hover {
   background-color: #2b0f9e;
