@@ -32,9 +32,11 @@ const App: React.FC = () => {
       >
         <HeroSection />
         <SliderSection />
-        
         <QuoteSection />
         <InfoSection />
+        
+        <CardList />
+
         <ConnectSection />
         <CtaSection />
       </Layout>

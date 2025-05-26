@@ -2,6 +2,7 @@ import React from "react";
 import type { ReactNode } from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import CardList from "./CardList/CardList";
 
 interface LayoutProps {
   children: ReactNode;

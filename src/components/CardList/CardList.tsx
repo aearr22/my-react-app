@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import type { CardData } from '../../Type';
+import styles from "../../assets/styles/InfoSection.module.css"; // импорт стилей InfoSection
 
 const CardList: React.FC = () => {
   const [cards, setCards] = useState<CardData[]>([]);
@@ -30,15 +31,16 @@ const CardList: React.FC = () => {
   if (error) return <p>Ошибка: {error}</p>;
 
   return (
-    <div>
+    <div className={styles.features} id="features-container">
       {cards.map((card) => (
-        <Card
-          key={card.id}
-          title={card.title}
-          text={card.text}
-          image={card.image}
-          onClick={() => console.log(card.image)}
-        />
+        <div key={card.id} className={styles.feature}>
+          <Card
+            title={card.title}
+            text={card.text}
+            image={card.image}
+            onClick={() => console.log(card.image)}
+          />
+        </div>
       ))}
     </div>
   );
