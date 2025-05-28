@@ -1,20 +1,18 @@
 import React from "react";
-import type { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import CardList from "./CardList/CardList";
 
 interface LayoutProps {
-  children: ReactNode;
   onSignup: () => void;
   onLogin: () => void;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, onSignup, onLogin }) => (
+const Layout: React.FC<LayoutProps> = ({ onSignup, onLogin }) => (
   <>
     <Header onSignup={onSignup} onLogin={onLogin} />
     <main>
-      {children}
+      <Outlet />
     </main>
     <Footer />
   </>

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Preloader from "./components/Preloader/Preloader";
 import SignupModal from "./components/SignupModal/SignupModal";
 import LoginModal from "./components/LoginModal/LoginModal";
+
 import Layout from "./components/Layout";
-import HeroSection from "./components/HeroSection/HeroSection";
-import SliderSection from "./components/SliderSection/SliderSection";
-import QuoteSection from "./components/QuoteSection/QuoteSection";
-import InfoSection from "./components/InfoSection/InfoSection";
-import ConnectSection from "./components/ConnectSection/ConnectSection";
-import CtaSection from "./components/CtaSection/CtaSection";
-import CardList from "./components/CardList/CardList"; 
+
+import HomePage from "./pages/HomePage";
+import CardsPage from "./pages/CardsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App: React.FC = () => {
   const [showSignup, setShowSignup] = useState(false);
@@ -22,25 +22,22 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       {loading && <Preloader />}
       <SignupModal open={showSignup} onClose={() => setShowSignup(false)} />
       <LoginModal open={showLogin} onClose={() => setShowLogin(false)} />
-      <Layout
-        onSignup={() => setShowSignup(true)}
-        onLogin={() => setShowLogin(true)}
-      >
-        <HeroSection />
-        <SliderSection />
-        <QuoteSection />
-        <InfoSection />
-        
-        <CardList />
 
-        <ConnectSection />
-        <CtaSection />
-      </Layout>
-    </>
+      <Routes>
+        <Route
+          path="/"
+          element={<Layout onSignup={() => setShowSignup(true)} onLogin={() => setShowLogin(true)} />}
+        >
+          <Route index element={<HomePage />} />
+          <Route path="cards" element={<CardsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
