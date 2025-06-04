@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../assets/styles/SliderSection.module.css";
 
 const images = [
@@ -10,12 +10,15 @@ const images = [
 const SliderSection: React.FC = () => {
   const [active, setActive] = useState(0);
 
-  function prev() {
-    setActive((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  }
-  function next() {
-    setActive((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  }
+  useEffect(() => {
+    // Запускаем интервал, который переключает слайд каждые 5 секунд (5000 мс)
+    const interval = setInterval(() => {
+      setActive(prev => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 5000);
+
+    // Очищаем интервал при размонтировании компонента
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className={styles.bloktem}>
@@ -28,8 +31,7 @@ const SliderSection: React.FC = () => {
             className={`${styles.heroImage} ${active === idx ? styles.active : ""}`}
           />
         ))}
-        <button className={styles.prev} onClick={prev}>&lt;</button>
-        <button className={styles.next} onClick={next}>&gt;</button>
+        {/* Кнопки убраны */}
       </div>
     </section>
   );

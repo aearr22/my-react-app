@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../assets/styles/LoginModal.module.css"; 
 
 interface LoginModalProps {
   open: boolean;
@@ -7,10 +8,11 @@ interface LoginModalProps {
 
 const LoginModal: React.FC<LoginModalProps> = ({ open, onClose }) => {
   if (!open) return null;
+
   return (
-    <div className="modal" style={{ display: "block" }}>
-      <div className="modal-content">
-        <span className="close" onClick={onClose}>&times;</span>
+    <div className={styles.modal}>
+      <div className={styles.modalContent}>
+        <span className={styles.close} onClick={onClose}>&times;</span>
         <h2>Вход</h2>
         <form>
           <label htmlFor="loginUsername">Имя пользователя:</label>
@@ -19,7 +21,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ open, onClose }) => {
           <label htmlFor="loginPassword">Пароль:</label>
           <input type="password" id="loginPassword" name="loginPassword" required />
 
-          <button className="buttonokno" type="submit">Войти</button>
+          <button className={styles.buttonokno} type="submit">Войти</button>
         </form>
       </div>
     </div>
