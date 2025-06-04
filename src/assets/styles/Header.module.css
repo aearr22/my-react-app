@@ -38,9 +38,12 @@
   background-color: #2b0f9e;
 }
 .login {
-  margin-left: 20px;
-  color: #333;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+padding: 10px 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+color: #3D1EDD;        /* цвет текста, например, синий */
+background-color: transparent; /* прозрачный фон */
+border: 2px solid #3D1EDD;     /* обводка того же цвета */
+cursor: pointer;
+
 }
