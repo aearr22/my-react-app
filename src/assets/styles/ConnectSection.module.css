@@ -25,3 +25,18 @@
 .connectText p {
   font-size: 18px;
 }
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  .connectImage {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .connectText {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+}

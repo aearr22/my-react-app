@@ -35,3 +35,18 @@
 .feature:hover .thickLine {
   background-color: #0056b3;
 }
+@media (max-width: 700px) {
+  .features, /* или ваш класс контейнера с комментариями */
+  .comments-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px; /* расстояние между комментариями */
+    align-items: stretch;
+  }
+
+  .feature, /* или класс отдельного комментария */
+  .comment-item {
+    width: 100% !important; /* чтобы занимал всю ширину */
+    margin: 0 !important;
+  }
+}

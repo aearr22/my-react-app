@@ -35,3 +35,31 @@
 }
 .prev { left: 10px; }
 .next { right: 10px; }
+
+@media (max-width: 768px) {
+  .slider {
+    width: 90vw !important;         /* Слайдер чуть уже экрана */
+    max-width: 350px !important;    /* Ограничиваем максимальную ширину */
+    height: 180px !important;   
+    margin-top: 275px !important;    /* Меньшая высота для мобильных */
+  }
+
+  .heroImage {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;   /* Картинка заполняет слайдер без искажений */
+    border-radius: 10px;
+    display: block;
+  }
+  .bloktem {
+    height: 320px !important;     /* Уменьшаем высоту блока */
+    margin-top: 36px !important;  /* Сдвигаем ниже, если нужно */
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

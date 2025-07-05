@@ -54,3 +54,19 @@ body {
 h1{
   font-size: 1.7rem;
 }
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .images {
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+  }
+  .img_dop1, .img_dop2 {
+    width: 50px !important;
+  }
+  blockquote h1 {
+    font-size: 1.2rem !important;
+  }
+}

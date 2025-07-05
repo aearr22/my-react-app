@@ -1,5 +1,3 @@
-
-
 .footer {
   background-color: #fff;
   color: #333;
@@ -35,4 +33,18 @@
 }
 .footer__link:hover {
   color: #aaa;
+}
+@media (max-width: 768px) {
+  .foot_all {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .footer__right, .foot_left {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+  .footer__right {
+    padding-left: 18px !important; /* Сбрасываем padding-left */
+  }
 }

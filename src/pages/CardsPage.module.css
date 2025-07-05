@@ -10,3 +10,8 @@
   gap: 20px;              /* Отступы между карточками */
   margin-top: 20px;
 }
+@media (max-width: 700px) {
+  .cardsGrid {
+    flex-direction: column; /* Вертикальный стек */
+  }
+}

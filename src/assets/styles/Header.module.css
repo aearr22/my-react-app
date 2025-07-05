@@ -2,6 +2,8 @@
   background-color: #fff;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 100;
 }
 
 .container {
@@ -16,31 +18,75 @@
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
+  color: #3D1EDD;
 }
 
+/* Навигация - по умолчанию горизонтальная */
 .nav {
   display: flex;
-  align-items: center; /* Выравниваем элементы по вертикали */
-  gap: 15px; /* Отступы между элементами */
+  align-items: center;
+  gap: 15px;
 }
 
+/* Скрываем бургер по умолчанию */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 101;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background-color: #3D1EDD;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Анимация бургера при открытии */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Кнопки и ссылки */
 .forRecruiters {
   margin-left: 20px;
-  color: #333;
+  color: #3D1EDD;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* Кнопка Sign Up */
+.forRecruiters:hover {
+  background-color: #f0f0ff;
+}
+
 .buttonjoin {
   background-color: #3D1EDD;
   color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -49,14 +95,11 @@
   background-color: #2b0f9e;
 }
 
-/* Кнопка Log In и Log Out */
 .login, .logout {
   padding: 10px 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #3D1EDD;           /* синий цвет текста */
+  color: #3D1EDD;
   background-color: transparent;
-  border: 2px solid #3D1EDD; /* синяя обводка */
+  border: 2px solid #3D1EDD;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -71,17 +114,52 @@
   color: #fff;
 }
 
-/* Приветствие "Привет, Имя" */
 .greeting {
   color: #3D1EDD;
   font-weight: 600;
   padding: 10px 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px solid transparent; /* Чтобы размер совпадал с кнопками */
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  user-select: none; /* Чтобы нельзя было выделить текст */
+  user-select: none;
   cursor: default;
+}
+
+/* === Адаптивность: при ширине <=1200px === */
+
+@media (max-width: 1200px) {
+  .nav {
+    position: fixed;
+    top: 64px; /* высота хедера */
+    right: 0;
+    height: calc(100vh - 64px);
+    width: 250px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+  }
+
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Ссылки в мобильном меню растягиваются */
+  .nav a,
+  .nav span {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  /* Центрируем логотип */
+  .container {
+    justify-content: space-between;
+  }
 }

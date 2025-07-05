@@ -3,3 +3,14 @@
   flex-direction: column;
   gap: 1rem;
 }
+@media (max-width: 700px) {
+  .features {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+  .feature {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+}

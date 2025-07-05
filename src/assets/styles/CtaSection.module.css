@@ -35,3 +35,38 @@
   max-width: 100%;
   height: auto;
 }
+@media (max-width: 1024px) {
+  .cta {
+    padding: 30px 15px; /* Уменьшаем внутренние отступы */
+  }
+
+  .cta .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .textContainer {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .textContainer h1 {
+    font-size: 1.8rem; /* Уменьшаем размер заголовка */
+    line-height: 1.2;
+  }
+
+  .ctaButton {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .ctaImage {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px; /* Если хотите скругление */
+  }
+}
+
