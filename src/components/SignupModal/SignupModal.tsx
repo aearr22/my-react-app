@@ -17,7 +17,7 @@ const SignupModal: React.FC<SignupModalProps> = ({ open, onClose, onSignupSucces
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (username && email && password) {
-      // Здесь должна быть ваша логика регистрации (API)
+
       onSignupSuccess(username);
     } else {
       alert("Пожалуйста, заполните все поля");

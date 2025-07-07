@@ -47,7 +47,7 @@
   
   .feature {
     margin: 20px;
-    width: calc(33.33% - 40px); /* Установите ширину так, чтобы карточки вмещались в ряд */
+    width: calc(33.33% - 40px); 
     text-align: left;
   }
   

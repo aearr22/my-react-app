@@ -36,17 +36,17 @@
   background-color: #0056b3;
 }
 @media (max-width: 700px) {
-  .features, /* или ваш класс контейнера с комментариями */
+  .features, 
   .comments-container {
     display: flex !important;
     flex-direction: column !important;
-    gap: 16px; /* расстояние между комментариями */
+    gap: 16px; 
     align-items: stretch;
   }
 
-  .feature, /* или класс отдельного комментария */
+  .feature, 
   .comment-item {
-    width: 100% !important; /* чтобы занимал всю ширину */
+    width: 100% !important; 
     margin: 0 !important;
   }
 }

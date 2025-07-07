@@ -45,6 +45,6 @@
     margin: 0 !important;
   }
   .footer__right {
-    padding-left: 18px !important; /* Сбрасываем padding-left */
+    padding-left: 18px !important; 
   }
 }

@@ -16,7 +16,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ open, onClose, onLoginSuccess }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (username && password) {
-      // Здесь должна быть ваша логика авторизации (API)
+
       onLoginSuccess(username);
     } else {
       alert("Введите имя пользователя и пароль");

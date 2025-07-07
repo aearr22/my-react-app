@@ -5,7 +5,7 @@ import defaultStyles from "../../assets/styles/InfoSection.module.css";
 
 interface CardListProps {
   limit?: number;
-  containerClassName?: string; // новый проп для кастомного класса контейнера
+  containerClassName?: string; 
 }
 
 const CardList: React.FC<CardListProps> = ({ limit = 10, containerClassName }) => {

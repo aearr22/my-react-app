@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ onSignup, onLogin, user, onLogout }) =>
           </Link>
         </div>
 
-        {/* Бургер-кнопка */}
+        {}
         <button
           className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
           onClick={toggleMenu}

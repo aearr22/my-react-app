@@ -21,14 +21,14 @@
   color: #3D1EDD;
 }
 
-/* Навигация - по умолчанию горизонтальная */
+
 .nav {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Скрываем бургер по умолчанию */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -53,7 +53,7 @@
   transform-origin: 1px;
 }
 
-/* Анимация бургера при открытии */
+
 .burger.open span:nth-child(1) {
   transform: rotate(45deg);
 }
@@ -123,7 +123,7 @@
   cursor: default;
 }
 
-/* === Адаптивность: при ширине <=1200px === */
+
 
 @media (max-width: 1200px) {
   .nav {
@@ -151,14 +151,14 @@
     display: flex;
   }
 
-  /* Ссылки в мобильном меню растягиваются */
+  
   .nav a,
   .nav span {
     width: 100%;
     font-size: 1.1rem;
   }
 
-  /* Центрируем логотип */
+
   .container {
     justify-content: space-between;
   }

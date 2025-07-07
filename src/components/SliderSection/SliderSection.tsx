@@ -11,12 +11,12 @@ const SliderSection: React.FC = () => {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    // Запускаем интервал, который переключает слайд каждые 5 секунд (5000 мс)
+
     const interval = setInterval(() => {
       setActive(prev => (prev === images.length - 1 ? 0 : prev + 1));
     }, 5000);
 
-    // Очищаем интервал при размонтировании компонента
+
     return () => clearInterval(interval);
   }, []);
 
@@ -31,7 +31,7 @@ const SliderSection: React.FC = () => {
             className={`${styles.heroImage} ${active === idx ? styles.active : ""}`}
           />
         ))}
-        {/* Кнопки убраны */}
+        {}
       </div>
     </section>
   );
